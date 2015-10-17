@@ -2,10 +2,12 @@ SlideIn_Menu
 ============
 
 jQuery で作ったボタンをクリックすると横からスライドインするメニュー
+↓
+スライドインした時に縦スクロールが可能なバージョン
 
 ## Sample Demo
 
-[横からスライドインするメニュー demo｜memocarilog](http://memocarilog.info/memocarilog-demo/SlideIn_Menu/demo.html)
+[横からスライドインするメニュー（縦スクロール可能版） demo｜memocarilog](http://memocarilog.info/memocarilog-demo/SlideIn_Menu2)
 
 ## Usage
 
