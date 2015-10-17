@@ -1,17 +1,27 @@
 /* スライドインメニューに必要なところ */
-body {
-	position: relative;
-	left: 0;
+html {
+    position: relative;
+    overflow-x: hidden;
+}
+body{
 	overflow-x: hidden;
+	margin: 0;
 }
 #slide_menu{
-	position: fixed;
+	position: absolute;
 	top: 0;
 	left: -240px;
 	width: 240px;
 	height: 100%;
     background: #E87272;
 }
+#container{
+	position: relative;
+	top:0 ;
+	left:0 ;
+	width: 100%;
+}
+
 /* 以下装飾など */
 #slide_menu ul{
     margin: 0;
@@ -43,12 +53,15 @@ body {
     font-size: 20px;
     cursor: pointer;
 }
-.container{
+#container{
+    position: relative;
+    top: 0;
+    left: 0;
+    overflow: hidden;
     margin: 0 auto;
     max-width: 750px;
-    overflow: hidden;
 }
-.container h1{
+#container h1{
     padding-left: 90px;
 }
 .content > section{
@@ -74,5 +87,4 @@ body {
     height: auto;
     border: solid 15px #fff;
     box-shadow: 0 1px 8px #ccc;
-    
 }

@@ -11,40 +11,51 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script>
 $(function(){
-var menu = $('#slide_menu'), // スライドインするメニューを指定
-	menuBtn = $('#button'), // トリガーとなるボタンを指定
-	body = $(document.body), 	
-    menuWidth = menu.outerWidth();	            
+var $menu = $('#slide_menu'), // スライドインするメニューを指定
+	$menuBtn = $('#button'), // トリガーとなるボタンを指定
+	$wrap = $('#container'), 	
+    menuWidth = $menu.outerWidth();	            
 
-    menuBtn.on('click', function(){
-	body.toggleClass('open');
-        if(body.hasClass('open')){
-			body.animate({'left' : menuWidth }, 300);			
-			menu.animate({'left' : 0 }, 300);					
-		} else {
-			menu.animate({'left' : -menuWidth }, 300);
-			body.animate({'left' : 0 }, 300);			
-		}		     
+    $menuBtn.on('click', function(){
+    $wrap.toggleClass('open');
+        if($wrap.hasClass('open')){
+            $wrap.animate({'left' : menuWidth }, 300);
+            $menu.animate({'left' : 0 }, 300);                    
+        } else {
+            $wrap.animate({'left' : 0 }, 300);      
+            $menu.animate({'left' : -menuWidth }, 300);      
+        }             
     });
 });    
 </script>
 </head>
 <body>
-<div class="container">
-
-    <h1>←ボタンをクリックで横からスライドインするメニュー demo｜memocarilog</h1>
-    
-    <!-- スライドメニュー部分-->
-    <nav id="slide_menu">
-        <ul>
-            <li><a href="#">menu1</a></li>
+<div id="layer"></div>
+<!-- スライドメニュー部分-->
+<nav id="slide_menu">
+    <ul>
+            <li><a href="https://www.google.co.jp/">menu1</a></li>
             <li><a href="#">menu2</a></li>
             <li><a href="#">menu3</a></li>
             <li><a href="#">menu4</a></li>
             <li><a href="#">menu5</a></li>
-        </ul>
-    </nav>
+            <li><a href="#">menu6</a></li>
+            <li><a href="#">menu7</a></li>
+            <li><a href="#">menu8</a></li>
+            <li><a href="#">menu9</a></li>
+            <li><a href="#">menu10</a></li>
+            <li><a href="#">menu11</a></li>
+            <li><a href="#">menu12</a></li>
+            <li><a href="#">menu13</a></li>
+            <li><a href="#">menu14</a></li>
+            <li><a href="#">menu15</a></li>
+    </ul>
+</nav>
 
+<div id="container">
+
+    <h1>←ボタンをクリックで横からスライドインするメニュー demo｜memocarilog</h1>
+    
     <!--メニューを出すボタン-->
     <button id="button"><i class="fa fa-bars"></i> Menu</button>
 
