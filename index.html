@@ -26,6 +26,12 @@ var menu = $('#slide_menu'), // スライドインするメニューを指定
 			body.animate({'left' : 0 }, 300);			
 		}		     
     });
+    
+    // クローズボタンの追加
+    $('#close_btn').on('click', function(){
+	    menu.animate({'left' : -menuWidth }, 300);
+		body.animate({'left' : 0 }, 300);
+    });
 });    
 </script>
 </head>
@@ -43,6 +49,7 @@ var menu = $('#slide_menu'), // スライドインするメニューを指定
             <li><a href="#">menu4</a></li>
             <li><a href="#">menu5</a></li>
         </ul>
+        <button id="close_btn">Close</button>
     </nav>
 
     <!--メニューを出すボタン-->
